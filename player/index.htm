@@ -1,0 +1,289 @@
+﻿<!DOCTYPE html>
+<html lang="tr" oncontextmenu="return false">
+<head>
+    <meta charset="UTF-8">
+
+    <script type="text/javascript" src="js/clappr.min.js"></script>
+<script type="text/javascript" src="js/player.js"></script>
+<script type="text/javascript" src="js/ftb2.js"></script>
+    <style>
+        body {
+            font-family: 'Cuprum', sans-serif;
+            color: #fff;
+            background-color: #272B34;
+            font-size: 16px;
+        }
+
+        .activeSelect {
+            background-color: #212227;
+        }
+
+
+        #logo {
+            background-color: #212227;
+            height: 40px;
+            min-width: 780px;
+        }
+
+        #logo-wrap {
+            width: 188px;
+            height: 48px;
+            margin: auto;
+        }
+
+        #logo-wrap a {
+
+            position: absolute;
+            top: 10px;
+
+        }
+
+        #key {
+            width: 780px;
+            min-width: 780px;
+            margin: auto;
+            margin-top: 25px;
+            font-size: 14px;
+        }
+
+        #title {
+            width: 780px;
+            min-width: 780px;
+            border-radius: 5px;
+            background-color: #000000;
+            padding: 4px;
+            margin: auto;
+            margin-top: 15px;
+            text-align: center;
+	    align: center;
+        }
+
+        #player {
+            width: 780px;
+            min-width: 780px;
+            max-width: 780px;
+            margin: auto;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        #events {
+            width: 780px;
+            min-width: 780px;
+            border-radius: 5px;
+            background-color: #383C47;
+            margin: auto;
+            margin-top: 10px;
+            margin-bottom: 25px;
+        }
+
+
+        .date {
+            float: right;
+            padding: 5px 5px;
+            margin-top: -40px;
+            padding-right: 50px;
+	    color: #ffffff;
+        }
+
+        .sports {
+            float: left;
+        }
+
+        #clear {
+            clear:both;
+        }
+
+        .sports a:hover {
+            text-decoration: none;
+            background-color: #212227;
+        }
+
+        .sports a {
+            text-decoration: none;
+            display: block;
+            float: left;
+            padding: 5px;
+            color: #fff;
+        }
+
+        .sportslass {
+            padding-right: 25px;
+        }
+
+        #eventlist {
+            margin-top: 8px;
+            border-radius: 5px;
+            overflow:auto;
+            color: #272B34;
+        }
+
+        .event {
+            padding: 5px 15px;
+            overflow:auto;
+            background-color: white;
+        }
+
+        .icon {
+            float: left;
+            margin-right: 5px;
+            margin-left: 5px;
+
+        }
+
+        .live {
+            float: left;
+            width: 80px;
+
+        }
+
+        .live span {
+            color: #ff4005;
+            font-size: 14px;
+        }
+
+        .league {
+            float: right;
+
+        }
+
+        .teams {
+            float: left;
+            margin-left: 150px;
+
+        }
+
+        .odd {
+            background-color: #383C47;
+            color: #fff;
+        }
+
+        .even {
+            color: #383C47;
+        }
+
+        .block:hover {
+            background-color: #f2f2f2;
+        }
+
+        .blockodd:hover {
+            background-color: #383c47;
+        }
+
+        .fas {
+            font-size: 14px;
+        }
+    </style>
+
+</head>
+<body oncontextmenu="return false">
+
+<div id="overlay">
+    <div id="keyenter">
+    </div>
+</div>
+
+
+<div id="title" class="text-center">
+    <span>TURIS TV SPOR TV</span>
+</div>
+<div id="date">
+    <div class="date">
+
+       <span>01.01.2024</span>
+
+    </div>
+
+<div id="player">
+    <script>
+        var player = new Clappr.Player({source: "", 
+        autoPlay: true, 
+        width: 780, 
+        height: 420, 
+        watermark: 'https://od.lk/s/OTFfMjg3NTI0NTVf/Icoon2Turis.ico',
+            watermarkLink: 'https://od.lk/s/OTFfMjg3NTI0NTVf/Icoon2Turis.ico',
+            position: 'top-right',
+    mediacontrol: {seekbar: "#FFD439", buttons: "#FFD439"},
+        parentId: "#player"});
+    </script>
+</div>
+
+<style>
+    #channels {
+        width: 780px;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 3px;
+    }
+
+    #bottom_wrapper {
+        margin: auto;
+        width: 780px;
+    }
+    .player_bottom_icons {
+        display: block;
+        float: left;
+        width: 85px;
+        border-radius: 5px;
+        padding: 5px 5px;
+        background-color: #000000;
+        text-align: center;
+        text-decoration: none;
+        color: #ffffff;
+
+    }
+
+    .player_bottom_icons:hover {
+        background-color: #0541f5;
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    .first_icon {
+            margin-auto: 5px;
+        }
+</style>
+
+<div id="channels">
+    <div id="bottom_wrapper">	
+<a onclick="location.reload();" class="player_bottom_icons eventClick " style="margin-left: 2px; margin-right: 2px;" dataname="Beinsport 1" dataid="">TURIS</a>				
+<a href="https://turkmedya-live.ercdn.net/tv360/tv360.m3u8" class="player_bottom_icons eventClick " style="margin-left: 5px; margin-right: 5px;" dataname="360 tv" dataid="ramo1">Tyyyy</a>
+<a href="javascript:#()" class="player_bottom_icons eventClick " style="margin-left: 5px; margin-right: 5px;" dataname="Bein Sports 2" dataid="beinsport2">Bein 2</a>
+<a href="javascript:#()" class="player_bottom_icons eventClick " style="margin-left: 5px; margin-right: 5px;" dataname="Bein Sports 3" dataid="liqtv3">Bein 3</a>
+<a href="javascript:#()" class="player_bottom_icons eventClick " style="margin-left: 5px; margin-right: 5px;" dataname="Bein Sports 4" dataid="beinsport4">Bein 4</a>
+<a href="javascript:#()" class="player_bottom_icons eventClick " style="margin-left: 5px; margin-right: 5px;" dataname="Beinsports 5" dataid="bein5">Bein 5</a>
+<a href="javascript:#()" class="player_bottom_icons eventClick " style="margin-left: 5px; margin-right: 5px;" dataname="Bein Sports Max 1" dataid="maks1">B Max1</a><br><br>
+<a href="javascript:#()" class="player_bottom_icons eventClick " style="margin-left: 0px; margin-right: 5px;" dataname="Bein Sports Max 2" dataid="maks2">B Max2</a>
+
+<a href="javascript:#()" class="player_bottom_icons eventClick " style="margin-left: 5px; margin-right: 5px;" dataname="S Sport" dataid="ssport1">SSport</a>
+<a href="javascript:#()" class="player_bottom_icons eventClick " style="margin-left: 5px; margin-right: 5px;" dataname="S Sport 2" dataid="ssport2">SSport2</a>
+<a href="javascript:#()" class="player_bottom_icons eventClick " style="margin-left: 5px; margin-right: 5px;" dataname="Smart Spor" dataid="smartspor">Smart1</a>
+<a href="javascript:#()" class="player_bottom_icons eventClick " style="margin-left: 5px; margin-right: 5px;" dataname="Tivibuspor 1" dataid="tivibu1">Tivibu1</a>
+<a href="javascript:#()" class="player_bottom_icons eventClick " style="margin-left: 5px; margin-right: 5px;" dataname="Tivibuspor 2" dataid="tivibu2">Tivibu2</a>
+<a href="javascript:#()" class="player_bottom_icons eventClick " style="margin-left: 5px; margin-right: 5px;" dataname="Tivibuspor 3" dataid="tivibu3">Tivibu3</a><br><br>
+<a href="javascript:#()" class="player_bottom_icons eventClick " style="margin-left: 0px; margin-right: 5px;" dataname="Tivibuspor 4" dataid="tivibu4">Tivibu4</a>
+<a href="javascript:#()" class="player_bottom_icons eventClick " style="margin-left: 5px; margin-right: 5px;" dataname="Tivibuspor 3" dataid="dunya2">A-Spor</a>
+
+        <a href="javascript:futbol2()" class="player_bottom_icons eventClick " style="margin-left: 2px; margin-right: 2px;" dataname="Alternatif 2" dataid="">Alternatif 2</a>
+        <div style="clear:both"></div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+</div>
+
+
+</body>
+</html>
