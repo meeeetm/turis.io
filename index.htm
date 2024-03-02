@@ -982,35 +982,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
             };
         }
 		
-		return member;
-	},
-	getCookie: function (name)
-	{
-		const value = `; ${document.cookie}`;
-		const parts = value.split(`; ${name}=`);
-		if (parts.length === 2)
-		{
-			return parts.pop().split(';').shift();
-		}
-		return '';
-	}
-}
 
-	 Virtara.Callback.Cart.add.push(function(r) {
-		 
-		var results = (Array.isArray(r.data) === false) ? [r.data] : r.data;
-		
-		for (var i = 0; i < results.length; i++) {
-			FBConversion.request({
-				value: parseFloat(results[i].price).toFixed(2),
-				currency: Virtara.Session.currency,
-				content_type: 'product',
-				content_ids: [results[i].variantId > 0 ? results[i].variantId : results[i].id]
-			}, 'AddToCart');
-		}
-		
-		
-	});
+
 		
 	FBConversion.run();
 });
